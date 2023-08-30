@@ -15,6 +15,7 @@ public class ObjectHit : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             meshRenderer.material.color = Color.red;
+            gameObject.tag = "Hit";
         }
     }
 

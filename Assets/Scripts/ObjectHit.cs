@@ -12,10 +12,16 @@ public class ObjectHit : MonoBehaviour
         backupColor = meshRenderer.material.color;
     }
     private void OnCollisionEnter(Collision other) {
-        meshRenderer.material.color = Color.red;
+        if (other.gameObject.tag == "Player")
+        {
+            meshRenderer.material.color = Color.red;
+        }
     }
 
     private void OnCollisionExit(Collision other) {
-        meshRenderer.material.color = backupColor;
+        // if (other.gameObject.tag == "Player")
+        // {
+        //     meshRenderer.material.color = backupColor;
+        // }
     }
 }
